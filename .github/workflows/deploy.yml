@@ -1,0 +1,27 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 当代码推送到 main 分支时触发工作流
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build documentation
+        # 如果是 React 模板，可能需要改为 npm run docs:build
+        run: yarn docs:build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.MY_TOKEN }}  # 使用仓库 Secret
+          publish_dir: ./docs-dist                # 设置生成文件的目录
