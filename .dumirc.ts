@@ -16,7 +16,7 @@ export default defineConfig({
     },
     nav: {
       'zh-CN': [{ title: '组件', link: '/' }],
-      'en-US': [{ title: 'Blog', link: '/en/blog' }],
+      'en-US': [{ title: 'component', link: '/en/component' }],
     },
   },
 });
