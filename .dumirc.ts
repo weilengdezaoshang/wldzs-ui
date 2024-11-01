@@ -6,9 +6,6 @@ export default defineConfig({
   base: process.env.NODE_ENV === 'production' ? `/${repo}` : '/',
   publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
   outputPath: 'docs-dist',
-  history: {
-    type: 'hash',
-  },
   themeConfig: {
     name: 'cool-ui',
     socialLinks: {
