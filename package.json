@@ -1,25 +1,36 @@
 {
-  "name": "cool-ui",
+  "name": "wldzs-cool-ui",
   "version": "0.0.1",
   "description": "a simple and useful react ui library",
   "license": "MIT",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "sideEffects": [
+    "**/*.less",
+    "**/*.css"
+  ],
+  "main": "dist/cjs/index.js",
+  "unpkg": "dist/umd/index.min.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "files": [
-    "dist"
+    "dist/esm",
+    "dist/cjs",
+    "dist/umd"
   ],
   "scripts": {
-    "build": "father build",
+    "build": "father build && tsc --project tsconfig.json --declaration --emitDeclarationOnly --outDir dist/esm",
     "build:watch": "father dev",
+    "deploy": "gh-pages -d docs-dist",
     "dev": "dumi dev",
     "docs:build": "dumi build",
     "doctor": "father doctor",
-    "lint": "npm run lint:es && npm run lint:css",
+    "lint": "npm run lint:es -- --ignore-path .eslintignore && npm run lint:css -- --ignore-path .stylelintignore",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install && dumi setup",
     "prepublishOnly": "father doctor && npm run build",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "test:all": "jest --coverage --bail",
+    "test:staged": "node jest.staged.js"
   },
   "commitlint": {
     "extends": [
@@ -28,38 +39,49 @@
   },
   "lint-staged": {
     "*.{md,json}": [
-      "prettier --write --no-error-on-unmatched-pattern"
+      "prettier --write --no-error-on-unmatched-pattern --ignore-path .gitignore"
     ],
     "*.{css,less}": [
-      "stylelint --fix",
-      "prettier --write"
+      "stylelint --fix --ignore-path .stylelintignore",
+      "prettier --write --ignore-path .gitignore"
     ],
     "*.{js,jsx}": [
-      "eslint --fix",
+      "eslint --fix --ignore-path .eslintignore",
       "prettier --write"
     ],
     "*.{ts,tsx}": [
-      "eslint --fix",
-      "prettier --parser=typescript --write"
+      "eslint --fix --ignore-path .eslintignore",
+      "prettier --parser=typescript --write",
+      "npm run test:staged"
     ]
   },
   "devDependencies": {
+    "@babel/runtime": "^7.23.5",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@umijs/lint": "^4.0.0",
+    "babel-plugin-import": "^1.13.8",
     "dumi": "^2.2.0",
     "eslint": "^8.23.0",
     "father": "^4.1.0",
+    "gh-pages": "^6.2.0",
     "husky": "^8.0.1",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jest-less-loader": "^0.2.0",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
     "prettier-plugin-packagejson": "^2.2.18",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "stylelint": "^14.9.1"
+    "stylelint": "^14.9.1",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "react": ">=16.9.0",
@@ -70,5 +92,6 @@
   },
   "authors": [
     "wldzs"
-  ]
+  ],
+  "slideEffects": false
 }

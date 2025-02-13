@@ -1,7 +1,7 @@
-# cool-ui
+# wldzs-ui
 
-[![NPM version](https://img.shields.io/npm/v/cool-ui.svg?style=flat)](https://npmjs.org/package/cool-ui)
-[![NPM downloads](http://img.shields.io/npm/dm/cool-ui.svg?style=flat)](https://npmjs.org/package/cool-ui)
+[![NPM version](https://img.shields.io/npm/v/wldzs-ui.svg?style=flat)](https://npmjs.org/package/wldzs-ui)
+[![NPM downloads](http://img.shields.io/npm/dm/wldzs-ui.svg?style=flat)](https://npmjs.org/package/wldzs-ui)
 
 a simple and useful react ui library
 

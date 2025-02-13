@@ -1,16 +1,23 @@
 {
   "compilerOptions": {
-    "strict": true,
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
     "declaration": true,
-    "skipLibCheck": true,
+    "declarationDir": "dist/esm",
+    "strict": true,
     "esModuleInterop": true,
-    "jsx": "react",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "cool-ui": ["src"],
-      "cool-ui/*": ["src/*", "*"]
-    }
+      "wldzs-ui": ["src"],
+      "wldzs-ui/*": ["src/*", "*"]
+    },
+    "allowSyntheticDefaultImports": true
   },
   "include": [".dumirc.ts", "src/**/*"]
 }
