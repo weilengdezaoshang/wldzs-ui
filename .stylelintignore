@@ -1,4 +1,4 @@
-docs-dist/
-coverage/
-dist/
-*.min.css 
+/docs-dist/
+/coverage/
+/dist/
+/*.min.css 

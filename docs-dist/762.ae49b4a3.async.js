@@ -1,5 +1,5 @@
 'use strict';
-(self.webpackChunkcool_ui = self.webpackChunkcool_ui || []).push([
+(self.webpackChunkwldzs_cool_ui = self.webpackChunkwldzs_cool_ui || []).push([
   [762],
   {
     87774: function (Bn, $, Re) {

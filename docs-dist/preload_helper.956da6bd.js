@@ -1,6 +1,6 @@
 !(function () {
   'use strict';
-  var t = '/cool-ui'.replace(/([^/])$/, '$1/'),
+  var t = '/wldzs-ui'.replace(/([^/])$/, '$1/'),
     e = location.pathname,
     n = e.startsWith(t) && decodeURI('/'.concat(e.slice(t.length)));
   if (n) {
@@ -37,39 +37,43 @@
       })(
         n,
         {
-          p: 'cool-ui',
+          p: 'wldzs-cool-ui',
           b: 'webpack',
           f: [
             [
               'nm__dumi__dist__client__pages__Demo__index.578aa5c0.chunk.css',
               9,
             ],
-            ['nm__dumi__dist__client__pages__Demo__index.5f51d9ed.async.js', 9],
+            ['nm__dumi__dist__client__pages__Demo__index.b7c2679d.async.js', 9],
             ['nm__dumi__dist__client__pages__404.8b85f2d9.chunk.css', 65],
-            ['nm__dumi__dist__client__pages__404.c1e9b697.async.js', 65],
-            ['Foo__index.md.fa981112.async.js', 81],
+            ['nm__dumi__dist__client__pages__404.a9b10d30.async.js', 65],
+            ['189.e8c51481.chunk.css', 189],
+            ['189.2fab5864.async.js', 189],
             [
-              'nm__dumi__theme-default__layouts__DocLayout__index.5c8f0e44.async.js',
+              'nm__dumi__theme-default__layouts__DocLayout__index.53db9650.async.js',
               519,
             ],
-            ['574.e8c51481.chunk.css', 574],
-            ['574.3572b8d8.async.js', 574],
+            ['Button__index.md.33be0665.chunk.css', 544],
+            ['Button__index.md.ebac22bb.async.js', 544],
+            ['guide.md.33be0665.chunk.css', 704],
+            ['guide.md.0e6a90e9.async.js', 704],
             [
-              'dumi__tmp-production__dumi__theme__ContextWrapper.d4169a97.async.js',
+              'dumi__tmp-production__dumi__theme__ContextWrapper.82c02247.async.js',
               923,
             ],
-            ['docs__index.md.2ccfad3d.async.js', 935],
-            ['docs__guide.md.099ba960.async.js', 937],
+            ['docs__index.md.33be0665.chunk.css', 935],
+            ['docs__index.md.0145ae21.async.js', 935],
+            ['972.68d230f6.async.js', 972],
           ],
           r: {
-            '/*': [2, 3, 5, 6, 7, 8],
-            '/': [9, 5, 6, 7, 8],
-            '/guide': [10, 5, 6, 7, 8],
-            '/~demos/:id': [0, 1, 8],
-            '/components/foo': [4, 5, 6, 7, 8],
+            '/*': [2, 3, 4, 5, 6, 11],
+            '/': [12, 13, 14, 4, 5, 6, 11],
+            '/~demos/:id': [0, 1, 11],
+            '/components/button': [7, 8, 14, 4, 5, 6, 11],
+            '/components/guide': [9, 10, 14, 4, 5, 6, 11],
           },
         },
-        { publicPath: '/cool-ui/' },
+        { publicPath: '/wldzs-ui/' },
       );
     null == i ||
       i.forEach(function (t) {

@@ -1,5 +1,5 @@
 'use strict';
-(self.webpackChunkcool_ui = self.webpackChunkcool_ui || []).push([
+(self.webpackChunkwldzs_cool_ui = self.webpackChunkwldzs_cool_ui || []).push([
   [519],
   {
     87171: function (n, e, _) {
@@ -24,7 +24,7 @@
           return o.Z;
         },
       });
-      var o = _(10222);
+      var o = _(86013);
     },
     95044: function (n, e, _) {
       _.d(e, {
